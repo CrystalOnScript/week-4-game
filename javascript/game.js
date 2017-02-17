@@ -15,17 +15,20 @@ var berry = Math.floor(Math.random() * 19) + 1;
 // console log for clarity
 console.log(cherry, orange, banana, berry);
 
-// add values together
+// var total is will be the value of var totalGuess added together
 	var total = 0;
+// var totalGUess will hold the value of the fruits once they are clicked on
     var totalGuess = [];
 
+// when cherry is clicked
 $("#cherry").on("click", function(){
+	// we push the value of cherry to the arry
 	totalGuess.push(cherry);
-
+// this is supposed to update var totoal to the array added together
 	for(i = 0; i < totalGuess.length; i++){
 	total += totalGuess[i];};
 
-	
+	// show what our totoal is and what is in the array
 	console.log(total);
 	console.log(totalGuess);
 	
