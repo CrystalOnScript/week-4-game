@@ -1,0 +1,20 @@
+.fruitimg {
+	width: 75px;
+	margin: 10px;
+}
+
+#gameNumber {
+	background-color: black;
+	color: white;
+	font-size: 30px;
+	height: 100px;
+	width: 200px;
+}
+
+#gameScore {
+	background-color: aqua;
+	height: 100px;
+	width: 150px;
+	margin-left: 10px;
+	padding-top: 20px;
+}
