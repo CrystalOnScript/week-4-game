@@ -8,6 +8,7 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Merienda" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
 	
 	<div class="row">
 
-		<div class="col-sm-6">
+		<div class="col-sm-6" id="gameRules">
 			<h1>Fruit Basket</h1>
 			<p>
 			You will be given a random number at the start of the game.
@@ -39,43 +40,46 @@
 	
 	<div class="row">
 		<div class="col-sm-2" id="gameNumber"></div>
-		<div class="col-sm-1" id="gameScore">
-			<ul>
-				<li id="wins">Wins: </li>
-				<li id="loss">Losses: </li>
-			</ul>
+		<div class="col-sm-1"></div>
+
+		<div class="col-sm-2" id="gameScore">
+
+				<p id="wins"></p>
+				<p id="loss"></p>
+
 		</div>
+		<div class="col-sm-6"></div>
 	</div>	
 
 	<div class="row">
-		<div class="col-md-8">
-			<div class="col-sm-2">
-				<img src="./images/cherry.png" class="fruitimg" id="cherry">
-			</div>
-			<div class="col-sm-2">
-				<img src="./images/orange.png" class="fruitimg" id="orange">
-			</div>
-			<div class="col-sm-2">
-				<img src="./images/banana.png" class="fruitimg" id="banana">
-			</div>
-			<div class="col-sm-2">
-				<img src="./images/berry.png" class="fruitimg" id="berry">
-			</div>
+		<div class="col-sm-8">
+			
+				<img src="./images/cherry.png" class="fruitimg img-responsive center-block" id="cherry">
+			
+			
+				<img src="./images/orange.png" class="fruitimg img-responsive center-block" id="orange">
+			
+		
+				<img src="./images/banana.png" class="fruitimg img-responsive center-block" id="banana">
+
+	
+				<img src="./images/berry.png" class="fruitimg img-responsive center-block" id="berry">
+
 			<div class="col-sm-4"></div>
 		</div>
 		<div class="col-sm-8"></div>
 	</div>
 	<div class="row">
-		<div class="col-sm-2">
+		<div class="col-sm-6" id="yourScore">
 			Your Score Is:
 		</div>
-		<div class="col-sm-10"></div>
+		<div class="col-sm-6"></div>
 	</div>
 	<div class="row">
-		<div class="col-sm-2" id="playerScore">
+		<div class="col-sm-6" id="playerScore">
 
 		</div>
-		<div class="col-sm-10"></div>
+		<div class="col-sm-6"></div>
 	</div>
 
 </div>

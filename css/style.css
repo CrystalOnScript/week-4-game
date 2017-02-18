@@ -1,20 +1,56 @@
 .fruitimg {
 	width: 75px;
-	margin: 10px;
+	float: left;
+	background-color: #FFEA8C;
+	margin: 13px;
+
+}
+
+#cherry {
+	margin-left: -5px;
 }
 
 #gameNumber {
-	background-color: black;
+	background-color: #A5FF64;
 	color: white;
 	font-size: 30px;
-	height: 100px;
-	width: 200px;
+	height: 84px;
+	padding: 10px;
+	margin: 10px;
 }
 
 #gameScore {
-	background-color: aqua;
-	height: 100px;
-	width: 150px;
-	margin-left: 10px;
-	padding-top: 20px;
+	background-color: #A5FF64;
+	margin: 10px;
+
+}
+
+#yourScore {
+	background-color: #7DE88D;
+	margin: 10px;
+
+}
+
+#playerScore {
+	background-color: #7DE88D;
+	margin: 10px;
+}
+
+body{
+	font-family: 'Merienda', cursive;
+	background-image: url("../images/woven.png");
+	font-size: 16px;
+	line-height: 32px;
+	text-align: center;
+}
+
+#gameRules {
+	background-color: #9AFFDA;
+	margin: 10px;
+	padding: 15px;
+
+}
+
+h1{
+	font-family: 'Homemade Apple', cursive;
 }
