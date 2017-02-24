@@ -23,100 +23,6 @@ var total = 0;
 win = 0;
 loss = 0;
 
-
-function playGame(){
-
-
-
-	$("#playerScore").html(total);
-	$("#wins").html("Wins: " + win);
-	$("#loss").html("Losses: " + win);
-
-	// when cherry is clicked
-	$("#cherry").on("click", function(){
-
-	// adds totoal with value of fruit
-		total = total + cherry;
-		$("#playerScore").html(total);
-		// show what our totoal is
-		console.log(total);
-
-		if(gameWin < total) {
-			loseReset();
-
-		}if(gameWin === total){
-			winReset();
-
-		};
-		
-	});
-
-	$("#orange").on("click", function(){
-
-	// adds totoal with value of fruit
-		total = total + orange;
-		$("#playerScore").html(total);
-		// show what our totoal is
-		console.log(total);
-
-		if(gameWin < total) {
-			loseReset();
-
-		}if(gameWin === total){
-			winReset();
-
-		};
-
-	});
-
-	$("#banana").on("click", function(){
-
-		// adds totoal with value of fruit
-		total = total + banana;
-		$("#playerScore").html(total);
-		// show what our totoal is
-		console.log(total);
-
-		if(gameWin < total) {
-			loseReset();
-
-		}if(gameWin === total){
-			winReset();
-
-		};
-
-	});
-
-	$("#berry").on("click", function(){
-		// adds totoal with value of fruit
-		total = total + berry;
-	$("#playerScore").html(total);
-		// show what our totoal is
-		console.log(total);
-
-		if(gameWin < total) {
-			loseReset();
-
-		}if(gameWin === total){
-			winReset();
-
-		};
-
-	});
-
-
-
-
-
-};
-
-
-
-
-playGame();
-
-
-
 function winReset(){
 
 	gameWin = Math.floor(Math.random() * 120) + 19;
@@ -126,10 +32,10 @@ function winReset(){
 
 	// create random numbers for fruit
 
-	cherry = Math.floor(Math.random() * 19) + 1;
-	orange = Math.floor(Math.random() * 19) + 1;
-	banana = Math.floor(Math.random() * 19) + 1;
-	berry = Math.floor(Math.random() * 19) + 1;
+	var cherry = Math.floor(Math.random() * 19) + 1;
+	var orange = Math.floor(Math.random() * 19) + 1;
+	var banana = Math.floor(Math.random() * 19) + 1;
+	var berry = Math.floor(Math.random() * 19) + 1;
 
 	win++;
 	alert("you win");
@@ -149,10 +55,10 @@ function loseReset(){
 
 	// create random numbers for fruit
 
-	cherry = Math.floor(Math.random() * 19) + 1;
-	orange = Math.floor(Math.random() * 19) + 1;
-	banana = Math.floor(Math.random() * 19) + 1;
-	berry = Math.floor(Math.random() * 19) + 1;
+	var cherry = Math.floor(Math.random() * 19) + 1;
+	var orange = Math.floor(Math.random() * 19) + 1;
+	var banana = Math.floor(Math.random() * 19) + 1;
+	var berry = Math.floor(Math.random() * 19) + 1;
 
 	
 	alert("you lose");
@@ -163,6 +69,56 @@ function loseReset(){
 	console.log(cherry, orange, banana, berry);
 
 }
+
+function playGame(){
+
+
+
+	$("#playerScore").html(total);
+	$("#wins").html("Wins: " + win);
+	$("#loss").html("Losses: " + win);
+
+	// when cherry is clicked
+	$(".fruitimg").on("click", function(event){
+
+		if(event.currentTarget.attributes.id.nodeValue === "cherry"){
+	// adds totoal with value of fruit
+		total = total + cherry;
+		$("#playerScore").html(total);
+		// show what our totoal is
+		console.log(total);
+		console.log();
+		}
+
+		if(event.currentTarget.attributes.id.nodeValue === "orange"){
+			total = total + orange;
+			$("#playerScore").html(total);
+		}
+		if(event.currentTarget.attributes.id.nodeValue === "banana"){
+			total = total + banana;
+			$("#playerScore").html(total);
+		}
+		if(event.currentTarget.attributes.id.nodeValue === "berry"){
+			total = total + berry;
+			$("#playerScore").html(total);
+		}
+
+		if(gameWin < total) {
+			loseReset();
+
+		}if(gameWin === total){
+			winReset();
+
+		};
+		
+	});
+
+};
+
+playGame();
+
+
+
 
 
 // give random num values to fruit
