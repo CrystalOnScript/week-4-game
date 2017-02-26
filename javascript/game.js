@@ -1,3 +1,4 @@
+
 // random number to try and add too
 
 var gameWin = Math.floor(Math.random() * 120) + 19;
@@ -72,8 +73,6 @@ function loseReset(){
 
 function playGame(){
 
-
-
 	$("#playerScore").html(total);
 	$("#wins").html("Wins: " + win);
 	$("#loss").html("Losses: " + win);
@@ -112,14 +111,7 @@ function playGame(){
 		};
 		
 	});
-
 };
-
 playGame();
 
-
-
-
-
-// give random num values to fruit
 
