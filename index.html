@@ -4,89 +4,129 @@
 	<title>Fruit Basket</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link
+		rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		crossorigin="anonymous"
+	>
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Merienda" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link
+		rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+		integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+		crossorigin="anonymous"
+	>
+
+	<link
+		href="https://fonts.googleapis.com/css?family=Homemade+Apple|Merienda"
+		rel="stylesheet"
+	>
+
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="css/style.css"
+	>
+
 </head>
 <body>
-<div class="container">
-	
-	<div class="row">
 
-		<div class="col-sm-6" id="gameRules">
-			<h1>Fruit Basket</h1>
-			<p>
-			You will be given a random number at the start of the game.
-			</p>
-			<p>
-			There are four different fruits below. By clicking on a fruit you will add a specific amount of points to your score.	
-			</p>
-			<p>
-			You win the game by matching your total score to random number. You loose the game if your total score goes above the random number.	
-			</p>
-			<p>
-			The value of each fruit is hidden until you click on it.	
-			</p>
-			<p>
-			Each time when the game starts, the game will change the values of each fruit.	
-			</p>
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-sm-6" id="gameRules">
+
+				<h1>Fruit Basket</h1>
+
+				<p>
+					You will be given a random number at the start of the game.
+				</p>
+
+				<p>
+					There are four different fruits below. By clicking on a fruit you will add a specific amount of points to your score.	
+				</p>
+
+				<p>
+					You win the game by matching your total score to random number. You loose the game if your total score goes above the random number.	
+				</p>
+
+				<p>
+					The value of each fruit is hidden until you click on it.	
+				</p>
+
+				<p>
+					Each time when the game starts, the game will change the values of each fruit.	
+				</p>
+
+			</div>
+
+			<div class="col-sm-6"></div>
 		</div>
-		<div class="col-sm-6"></div>
-	
+
+		<div class="row">
+
+			<div class="col-sm-2" id="gameNumber"></div>
+
+			<div class="col-sm-1"></div>
+
+			<div class="col-sm-2" id="gameScore">
+
+					<p id="wins"></p>
+
+					<p id="loss"></p>
+
+			</div>
+
+			<div class="col-sm-6"></div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-sm-8">
+
+					<img src="./images/cherry.png" class="fruitimg img-responsive center-block" id="cherry">
+
+					<img src="./images/orange.png" class="fruitimg img-responsive center-block" id="orange">
+
+					<img src="./images/banana.png" class="fruitimg img-responsive center-block" id="banana">
+
+					<img src="./images/berry.png" class="fruitimg img-responsive center-block" id="berry">
+
+				<div class="col-sm-4"></div>
+
+			</div>
+
+			<div class="col-sm-8"></div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-sm-6" id="yourScore">
+				Your Score Is:
+			</div>
+
+			<div class="col-sm-6"></div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-sm-6" id="playerScore"></div>
+
+			<div class="col-sm-6"></div>
+		</div>
+
 	</div>
-	
-	<div class="row">
-		<div class="col-sm-2" id="gameNumber"></div>
-		<div class="col-sm-1"></div>
 
-		<div class="col-sm-2" id="gameScore">
+	<script
+		src="https://code.jquery.com/jquery-3.1.1.js"
+		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		crossorigin="anonymous"
+	></script>
 
-				<p id="wins"></p>
-				<p id="loss"></p>
-
-		</div>
-		<div class="col-sm-6"></div>
-	</div>	
-
-	<div class="row">
-		<div class="col-sm-8">
-			
-				<img src="./images/cherry.png" class="fruitimg img-responsive center-block" id="cherry">
-			
-			
-				<img src="./images/orange.png" class="fruitimg img-responsive center-block" id="orange">
-			
-		
-				<img src="./images/banana.png" class="fruitimg img-responsive center-block" id="banana">
-
-	
-				<img src="./images/berry.png" class="fruitimg img-responsive center-block" id="berry">
-
-			<div class="col-sm-4"></div>
-		</div>
-		<div class="col-sm-8"></div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6" id="yourScore">
-			Your Score Is:
-		</div>
-		<div class="col-sm-6"></div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6" id="playerScore">
-
-		</div>
-		<div class="col-sm-6"></div>
-	</div>
-
-</div>
-<script
-  src="https://code.jquery.com/jquery-3.1.1.js"
-  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-  crossorigin="anonymous"></script>
-<script src="javascript/game.js"></script>
+	<script src="javascript/game.js"></script>
 </body>
 </html>
